@@ -1,1 +1,24 @@
-
+-----------------step1-----------------
+sudo useradd OSC 
+sudo groupadd osc_group
+sudo usermod osc_group OSC
+sudo usermod -aG osc_group OSC
+sudo usermod -aG OSC
+su -OSC
+-----------------step2-----------------
+cd osc
+mkdir permission_practice
+touch private_file.txt public_file.txt  executable_file.txt
+sudo chmod 666 public_file.txt
+sudo chmod 600 private_file.txt
+sudo chmod 700 public_file.txt
+-----------------step3-----------------
+sudo chown osc private_file.txt
+sudo chown :osc_group private_file.txt
+-----------------step4-----------------
+sleep 1000 &
+kill -s KILL 3493
+sudo apt install vim
+-----------------step5-----------------
+sudo apt install neofetch
+sudo apt remove neofetch
