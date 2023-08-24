@@ -1,0 +1,35 @@
+--------------step1--------------
+cd Downloads
+ls -l
+file Updated-Task-02.zip
+unzip Updated-Task-02.zip
+cd Updated-Task-02.zip
+ls 
+cat README.txt
+--------------step2--------------
+ls -al
+cd .level-1
+ls
+file level-2
+cat README.txt
+mv level-2 decompresses-level
+ls
+mv decompresses-level decompressed-level
+tar xf decompressed-level
+ls
+cd level-2
+ls
+cat README.txt
+--------------step3--------------
+find level-3
+file level-3
+cd ./gBT5u0vLT5
+ls
+tar -xf level-3.out
+ls
+cat README.txt
+cat X6lkChFKsj
+find ~/ -size 73c
+file /home/osc/Downloads/Updated-Tasl-02/.level-1/level-2/gBT5u0vLT5/level-3/m7lRDpRTUJ/xVMvVOKNW5
+cat file /home/osc/Downloads/Updated-Tasl-02/.level-1/level-2/gBT5u0vLT5/level-3/m7lRDpRTUJ/xVMvVOKNW5
+
