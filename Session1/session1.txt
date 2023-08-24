@@ -1,1 +1,38 @@
-
+-----------------step1-----------------
+mkdir 'sama khaled'
+cd sama khaled'
+-----------------step2-----------------
+mkdir Documents
+cd Documents
+touch file1.txt file2.txt file3.txt
+ls
+-----------------step3-----------------
+cd ..
+touch .hidden_file
+ls
+ls -a
+-----------------step4-----------------
+nano file1.txt
+hey,there
+ctrl x
+cat file1.txt
+-----------------step5-----------------
+cd -
+-----------------step6-----------------
+mkdir '-'
+cd "./-"
+-----------------step7-----------------
+cp -r Documents "sama khaled"
+mv Documents "My_Documents
+ls
+-----------------step8-----------------
+cat ".hidden_file"
+nano ".hidden_file"
+-----------------step9-----------------
+mv file2.txt ..
+mv file3.txt ..
+cd ..
+ls
+-----------------step10-----------------
+rm -rf 'sama khaled'
+ls
