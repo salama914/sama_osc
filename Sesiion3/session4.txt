@@ -1,1 +1,84 @@
+-----------step1---------------
+nano system_file.sh
+#!/bin/bash
+username =$(whoami)
+kernel_version=$(uname -r)
+echo"Username: $username
+echo"Kernel version: $kernel_version
+./system_file.sh
 
+
+-----------step2---------------
+nano file_check.sh
+#!/bin/bash
+read file_name
+read file_path
+the_path="file_name/file_path"
+if [ -e "#the_path"];
+then
+echo "File exists"
+echo "contents of $file_name :"
+cat "the_path"
+else
+echo "File does not exist"
+fi
+
+
+-----------step4---------------
+nana calculator.sh
+#!/bin/bash
+
+while true; do
+    echo "1. Addition"
+    echo "2. Subtraction"
+    echo "3. Multiplication"
+    echo "4. Division"
+    echo "5. Exit"
+    
+    echo -n "Enter your choice: "
+    read choice
+    
+    case $choice in
+        1)
+            echo -n "Enter the first number: "
+            read num1
+            echo -n "Enter the second number: "
+            read num2
+            result=$((num1 + num2))
+            echo "$num1 + $num2 = $result"
+            ;;
+        2)
+            echo -n "Enter the first number: "
+            read num1
+            echo -n "Enter the second number: "
+            read num2
+            result=$((num1 - num2))
+            echo "$num1 - $num2 = $result"
+            ;;
+        3)
+            echo -n "Enter the first number: "
+            read num1
+            echo -n "Enter the second number: "
+            read num2
+            result=$((num1 * num2))
+            echo "$num1 * $num2 = $result"
+            ;;
+        4)
+            echo -n "Enter the first number: "
+            read num1
+            echo -n "Enter the second number: "
+            read num2
+            if [ $num2 -eq 0 ]; then
+                echo "Error: Division by zero is not allowed."
+            else
+                result=$((num1 / num2))
+                echo "$num1 / $num2 = $result"
+            fi
+            ;;
+        5)
+            echo "Exiting..."
+            exit 0
+            ;;
+    esac
+    
+done
