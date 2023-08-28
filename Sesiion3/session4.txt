@@ -8,6 +8,37 @@ echo"Kernel version: $kernel_version
 ./system_file.sh
 
 
+-----------step3---------------
+nano rename_file.sh
+#!/bin/bash
+
+if [ $# -ne 2 ]; then
+    echo "Usage: $0 <extension> <new_name>"
+    exit 1
+fi
+
+extension="$1"
+new_name="$2"
+count=1
+
+for file in *.$extension; do
+
+    filename_without_extension="${file%.*}"
+
+    new_filename="$new_name$count.$extension"
+
+    while [ -e "$new_filename" ]; do
+        count=$((count + 1))
+        new_filename="$new_name$count.$extension"
+    done
+    mv "$file" "$new_filename"
+
+    count=$((count + 1))
+done
+
+echo "Files with extension .$extension have been renamed to $new_name1.$extension, $new_name2.$extension, ..."
+
+
 -----------step2---------------
 nano file_check.sh
 #!/bin/bash
